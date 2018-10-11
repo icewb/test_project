@@ -6,10 +6,11 @@
 
     <h3>登陆页面</h3>
     <div style="width:100%;text-align:center">
-    <form action="/login_action/" method="get">
+    <form action="/login_action/" method=“post”>
       账号: <input type="text" name="username" /><br>
       密码: <input type="password" name="password" /><br>
       {{ error }}<br>
+      {% csrf_token %}
       <input type="submit" style="width:80px;height:50px;font-size:70px" value="提交" />
     </form>
   </div>
